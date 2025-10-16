@@ -16,23 +16,21 @@ Node.js(Express) + MySQL 기반으로 **게시글 CRUD API**를 제공합니다.
 ---
 
 ## 🗂 폴더 구조
+
+```bash
 server/
-┣ config/
-┃ ┗ db.js
-┣ controllers/
-┃ ┗ postController.js
-┣ models/
-┃ ┗ postModel.js
-┣ routes/
-┃ ┗ postRoutes.js
-┣ server.js
-┣ .env
-┣ package.json
-
-yaml
-코드 복사
-
----
+├── config/
+│   └── db.js
+├── controllers/
+│   └── postController.js
+├── models/
+│   └── postModel.js
+├── routes/
+│   └── postRoutes.js
+├── server.js
+├── .env
+└── package.json
+```
 
 ## 🚀 실행 방법
 ```bash
