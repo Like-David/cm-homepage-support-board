@@ -28,11 +28,7 @@ app.listen(PORT, () => {
 });
 
 // 간단한 테스트용 엔드포인트
-app.get('/api/posts', (req, res) => {
-    db.query('SELECT * FROM posts ORDER BY created_at DESC', (err, rows) => {
-        if (err) return res.status(500).send(err);
-        res.json(rows);
-    });
-});
+const postRoutes = require('./routes/posts');
+app.use('/api/posts', postRoutes);
 
 app.listen(3001, () => console.log('Server running on port 3001'));
