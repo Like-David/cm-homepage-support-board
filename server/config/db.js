@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mysql = require('mysql2');
 
-const db = mysql.createPool({
+const pool = mysql.createPool({
     connectionLimit: 10,
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -10,4 +10,6 @@ const db = mysql.createPool({
     port: process.env.DB_PORT || 3306,
 });
 
-module.exports = db;
+// 기본 pool export (callback 지원)
+// promise() 메소드로 promise 버전 사용 가능
+module.exports = pool;
