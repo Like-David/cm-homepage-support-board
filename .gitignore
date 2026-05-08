@@ -1,6 +1,11 @@
 # node
 node_modules/
 
+# 환경변수 (DB 비밀번호, JWT 키 포함 - 절대 커밋 금지)
+server/.env
+.env
+.env.*
+
 # IDE
 .idea/
 

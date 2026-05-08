@@ -9,8 +9,8 @@ const bcrypt = require('bcryptjs');
 
 const ADMIN = {
     name: '관리자',
-    email: 'admin@cmi.com',
-    password: 'Admin1234!@',
+    email: 'admin@cminnovation.co.kr',
+    password: 'cmi0720!@',
     role: 'ADMIN',
 };
 

@@ -11,6 +11,8 @@ const authRoutes = require('./routes/auth');
 console.log('Auth routes loaded:', typeof authRoutes, authRoutes);
 const adminRoutes = require('./routes/admin');
 console.log('Admin routes loaded:', typeof adminRoutes);
+const certVerifyRoutes = require('./routes/certVerify');
+console.log('CertVerify routes loaded:', typeof certVerifyRoutes);
 
 const app = express();
 app.use(cors());
@@ -34,8 +36,10 @@ app.use('/api/auth', authRoutes);
 console.log('Auth route registered');
 app.use('/api/admin', adminRoutes);
 console.log('Admin route registered');
+app.use('/api/cert-verify', certVerifyRoutes);
+console.log('CertVerify route registered');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
     console.log('Available routes:');
